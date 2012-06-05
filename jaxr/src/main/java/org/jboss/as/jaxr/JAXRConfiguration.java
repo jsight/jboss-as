@@ -68,11 +68,11 @@ public class JAXRConfiguration {
                 setConnectionFactoryBinding(attributeValue);
             } else if (attributeName.equals(ModelConstants.CONNECTION_FACTORY_IMPL)) {
                 setConnectionFactoryImplementation(attributeValue);
-            } else if (attributeValue != null) {
-                properties.setProperty(attributeName, attributeValue);
             } else {
-                properties.remove(attributeName);
+                properties.setProperty(attributeName, attributeValue);
             }
+        } else {
+            properties.remove(attributeName);
         }
     }
 
